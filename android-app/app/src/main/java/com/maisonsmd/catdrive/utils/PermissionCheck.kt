@@ -10,7 +10,7 @@ import android.content.pm.PackageManager
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.maisonsmd.catdrive.MeowGoogleMapNotificationListener
+import com.maisonsmd.catdrive.GoogleMapNotificationListener
 import com.maisonsmd.catdrive.lib.Intents
 import timber.log.Timber
 
@@ -21,7 +21,7 @@ class PermissionCheck {
             Settings.Secure.getString(
                 context.contentResolver, "enabled_notification_listeners"
             ).also {
-                return MeowGoogleMapNotificationListener::class.qualifiedName.toString() in it
+                return GoogleMapNotificationListener::class.qualifiedName.toString() in it
             }
         }
 

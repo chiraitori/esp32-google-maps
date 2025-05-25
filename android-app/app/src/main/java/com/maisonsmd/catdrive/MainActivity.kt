@@ -31,7 +31,7 @@ const val SHARED_PREFERENCES_FILE = "${BuildConfig.APPLICATION_ID}.preferences"
 class MainActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityMainBinding
     private lateinit var mViewModel: ActivityViewModel
-    private var mNavigationService: MeowGoogleMapNotificationListener? = null
+    private var mNavigationService: GoogleMapNotificationListener? = null
     private var mNavigationServiceBound = false
     private var mBroadcastService: BleService? = null
     private var mBroadcastServiceBound = false
@@ -53,10 +53,10 @@ class MainActivity : AppCompatActivity() {
         mViewModel.permissionUpdatedTimestamp.postValue(System.currentTimeMillis())
     }
 
-    // Bind MeowGoogleMapNotificationListener service
+    // Bind GoogleMapNotificationListener service
     private val navigationConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
-            if (service !is MeowGoogleMapNotificationListener.LocalBinder) return
+            if (service !is GoogleMapNotificationListener.LocalBinder) return
 
             mNavigationService = service.getService()
             mNavigationServiceBound = true
@@ -213,7 +213,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         checkPermissions()
 
-        // Listen to MeowGoogleMapNotificationListener dat
+        // Listen to GoogleMapNotificationListener dat
         LocalBroadcastManager.getInstance(this)
             .registerReceiver(navigationReceiver, IntentFilter(Intents.NAVIGATION_UPDATE))
         // Listen to BroadcastService data
@@ -224,7 +224,7 @@ class MainActivity : AppCompatActivity() {
                 addAction(Intents.BACKGROUND_SERVICE_STATUS)
             })
 
-        Intent(this, MeowGoogleMapNotificationListener::class.java).also { intent ->
+        Intent(this, GoogleMapNotificationListener::class.java).also { intent ->
             intent.action = Intents.BIND_LOCAL_SERVICE
         }.also { intent -> bindService(intent, navigationConnection, Context.BIND_AUTO_CREATE) }
         Intent(this, BleService::class.java)

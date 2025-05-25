@@ -548,8 +548,8 @@ class BleService : Service(), LocationListener {
             this, 0, intent,
             PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
-        mNotificationBuilder = builder.setContentTitle("CatDrive service is meowing")
-            .setContentText("Méo!")
+        mNotificationBuilder = builder.setContentTitle("CatDrive")
+            .setContentText("Service is running")
             .setSmallIcon(R.drawable.catface)
             .setForegroundServiceBehavior(Notification.FOREGROUND_SERVICE_IMMEDIATE)
             .setContentIntent(pendingIntent)

@@ -1,6 +1,8 @@
 CatDrive is a fun project that displays Google Map navigation on a small screen that I attach to my motorbike.
 
-# How to
+# How it works
+
+The Android app must be installed and running on your phone, it will read the current navigation data from Google Maps and send it to the ESP32 over Bluetooth Low Energy (BLE).
 
 ## Hardware
 

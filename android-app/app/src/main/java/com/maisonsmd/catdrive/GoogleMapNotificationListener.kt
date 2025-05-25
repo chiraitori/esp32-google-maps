@@ -8,7 +8,7 @@ import com.maisonsmd.catdrive.lib.Intents
 import com.maisonsmd.catdrive.lib.NavigationNotification
 import com.maisonsmd.catdrive.service.NavigationListener
 
-class MeowGoogleMapNotificationListener : NavigationListener() {
+class GoogleMapNotificationListener : NavigationListener() {
     private val mBinder = LocalBinder()
 
     /**
@@ -17,7 +17,7 @@ class MeowGoogleMapNotificationListener : NavigationListener() {
      */
     inner class LocalBinder : Binder() {
         // Return this instance of LocalService so clients can call public methods
-        fun getService(): MeowGoogleMapNotificationListener = this@MeowGoogleMapNotificationListener
+        fun getService(): GoogleMapNotificationListener = this@GoogleMapNotificationListener
     }
 
     override fun onBind(intent: Intent?): IBinder? {

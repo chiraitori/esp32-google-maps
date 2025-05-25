@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.maisonsmd.catdrive.MeowGoogleMapNotificationListener
+import com.maisonsmd.catdrive.GoogleMapNotificationListener
 import com.maisonsmd.catdrive.lib.Intents
 import com.maisonsmd.catdrive.service.BleService
 import com.maisonsmd.catdrive.ui.ActivityViewModel
@@ -26,7 +26,7 @@ class ServiceManager {
                 ).apply { setAction(action) })
             activity.startService(
                 Intent(
-                    activity, MeowGoogleMapNotificationListener::class.java
+                    activity, GoogleMapNotificationListener::class.java
                 ).apply { setAction(action) })
         }
 
@@ -56,7 +56,7 @@ class ServiceManager {
                 ).apply { action = Intents.DISABLE_SERVICES })
             activity.startService(
                 Intent(
-                    activity, MeowGoogleMapNotificationListener::class.java
+                    activity, GoogleMapNotificationListener::class.java
                 ).apply { action = Intents.DISABLE_SERVICES })
         }
 
