@@ -1,0 +1,29 @@
+{
+  "[cpp]": {
+    "editor.formatOnSave": true
+  },
+  "[c]": {
+    "editor.formatOnSave": false
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "build": true,
+  },
+  "files.associations": {
+    "array": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "*.tcc": "cpp"
+  },
+}
