@@ -7,6 +7,9 @@
     <!-- Preference Titles -->
     <string name="device_header">Device</string>
     <string name="service_header">Service</string>
+    <string name="service_summary">Run services to receive navigation data</string>
+    <string name="permissions_header">Permissions</string>
+    <string name="permissions_summary">Grant all these permissions for the app to work</string>
 
     <string name="device_connect">Select a device</string>
     <string name="no_device_connected">No device connected</string>
@@ -14,7 +17,6 @@
     <!-- Service Preferences -->
     <string name="service_enable">Run services</string>
     <string name="service_enable_notice">Requires all permissions allowed &amp; bluetooth turned on</string>
-    <string name="missing_permissions">Missing permissions</string>
     <string name="action_settings">Go to notification settings</string>
 
     <string name="permission_access_notification">Accessing notifications</string>

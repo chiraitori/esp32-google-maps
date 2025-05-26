@@ -1,5 +1,10 @@
 CatDrive is a fun project that displays Google Map navigation on a small screen that I attach to my motorbike.
 
+[![Thumbnail](https://img.youtube.com/vi/bleMd7QEXfQ/0.jpg)](https://www.youtube.com/watch?v=bleMd7QEXfQ)
+
+
+[Read blog](https://maisonsmd.dev/blog/google-maps-on-esp32)
+
 # How it works
 
 The Android app must be installed and running on your phone, it will read the current navigation data from Google Maps and send it to the ESP32 over Bluetooth Low Energy (BLE).
@@ -26,9 +31,3 @@ Currently I make the app specificly for my Pixel 4a phone running Android 13, so
 
 - Install Android Studio and SDK for Android 13.
 - Open `android-app` folder in Android Studio.
-
-
-## Modifications
-
-### Font
-

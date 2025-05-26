@@ -28,7 +28,7 @@
             android:title="@string/title_speed_limit" />
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/service_header">
+    <PreferenceCategory app:title="@string/service_header" android:summary="@string/service_summary">
         <SwitchPreference
             android:defaultValue="false"
             android:key="enable_service"
@@ -36,7 +36,7 @@
             android:title="@string/service_enable" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/missing_permissions">
+    <PreferenceCategory android:title="@string/permissions_header" android:summary="@string/permissions_summary">
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="access_notification"
