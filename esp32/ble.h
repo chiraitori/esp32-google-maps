@@ -144,7 +144,7 @@ void initBle() {
 	});
 
 	// Create the BLE Device
-	BLEDevice::init("CatDrive");
+	BLEDevice::init("Ganyu Drive");
 	Serial.println(BLEDevice::getMTU());
 	BLEDevice::setMTU(240);
 

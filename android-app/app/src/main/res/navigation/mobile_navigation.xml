@@ -6,12 +6,19 @@
     app:startDestination="@id/navigation_home">
 
     <fragment
+        android:id="@+id/navigation_product"
+        android:name="com.chiraitori.ganyu.ui.product.ProductFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_product" />
+
+    <fragment
         android:id="@+id/navigation_home"
-        android:name="com.maisonsmd.catdrive.ui.home.HomeFragment"
+        android:name="com.chiraitori.ganyu.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.maisonsmd.catdrive.ui.settings.SettingsFragment"
+        android:name="com.chiraitori.ganyu.ui.settings.SettingsFragment"
         android:label="@string/title_settings" />
 </navigation>

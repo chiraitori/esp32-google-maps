@@ -2,13 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/navigation_product"
+        android:icon="@drawable/ic_product"
+        android:title="Product" />
+
+    <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:icon="@drawable/ic_device"
+        android:title="Device" />
 
     <item
         android:id="@+id/navigation_settings"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:title="@string/title_settings" />
+        android:icon="@drawable/ic_setting"
+        android:title="Setting" />
 
 </menu>

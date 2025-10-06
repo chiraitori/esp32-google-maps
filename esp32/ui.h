@@ -138,7 +138,7 @@ namespace UI {
 		lv_label_set_text(lblSpeedUnit, "km/h");
 
 		lblDistanceToNextRoad = lv_label_create(lv_scr_act());
-		lv_label_set_text(lblDistanceToNextRoad, "CatDrive");
+		lv_label_set_text(lblDistanceToNextRoad, "Ganyu Hud");
 		lv_obj_set_style_text_color(lblDistanceToNextRoad, lv_color_make(0x00, 0x00, 0xff), LV_PART_MAIN);
 
 		lblNextRoad = lv_label_create(lv_scr_act());

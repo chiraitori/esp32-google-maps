@@ -1,10 +1,9 @@
-package com.maisonsmd.catdrive.utils
+package com.chiraitori.ganyu.utils
 
 import android.Manifest
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -19,9 +18,11 @@ import timber.log.Timber
 class PermissionCheck {
     companion object {
         fun checkNotificationsAccessPermission(context: Context): Boolean {
-            val componentName = ComponentName(context, GoogleMapNotificationListener::class.java).flattenToString()
-            val enabledListeners = Settings.Secure.getString(context.contentResolver, "enabled_notification_listeners")
-            return enabledListeners?.contains(componentName) == true
+            Settings.Secure.getString(
+                context.contentResolver, "enabled_notification_listeners"
+            ).also {
+                return GoogleMapNotificationListener::class.qualifiedName.toString() in it
+            }
         }
 
         fun checkNotificationPostingPermission(context: Context): Boolean {
